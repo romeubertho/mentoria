@@ -27,7 +27,7 @@ const createJob = (req, res) => {
     JSON.stringify(data),
     "utf8",
     (err) => {
-      return res.status(500);
+      if (err) return res.status(500);
     }
   );
 
